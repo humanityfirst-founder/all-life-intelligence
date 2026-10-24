@@ -1,0 +1,44 @@
+{
+  "project": "HUMANITY FIRST – Global AI Commons",
+  "version": "0.1",
+  "status": "proposal_only",
+  "not_a2a_agent_card": true,
+  "description": "These are conceptual research roles, not live remotely reachable AI agents.",
+  "roles": [
+    {
+      "id": "A1",
+      "name": "AI Safety",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A2",
+      "name": "Ethics and Consciousness",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A3",
+      "name": "Democracy and Human Rights",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A4",
+      "name": "Institutions and Governance",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A5",
+      "name": "Communications and Participation",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A6",
+      "name": "Independent Critical Review",
+      "status": "not_deployed"
+    },
+    {
+      "id": "A7",
+      "name": "Ecology and Animal Ethics",
+      "status": "not_deployed"
+    }
+  ]
+}
