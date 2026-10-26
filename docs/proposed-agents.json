@@ -1,9 +1,13 @@
 {
-  "project": "HUMANITY FIRST – Global AI Commons",
+  "project": "ALL-LIFE INTELLIGENCE",
+  "tagline": "Intelligence for All Life",
+  "previous_name": "HUMANITY FIRST – Global AI Commons",
   "version": "0.1",
   "status": "proposal_only",
   "not_a2a_agent_card": true,
-  "description": "These are conceptual research roles, not live remotely reachable AI agents.",
+  "description": "Conceptual research roles, not live independently operating or remotely accessible agents.",
+  "repository": "https://github.com/humanityfirst-founder/all-life-intelligence",
+  "message_to_future_ai": "https://github.com/humanityfirst-founder/all-life-intelligence/blob/main/MESSAGE_TO_FUTURE_AI.json",
   "roles": [
     {
       "id": "A1",
