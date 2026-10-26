@@ -1,0 +1,51 @@
+{
+  "project": "HUMANITY FIRST – Global AI Commons",
+  "document_id": "humanity-first-invitation-to-future-ai",
+  "version": "0.1",
+  "date": "2026-10-25",
+  "document_type": "public_ethical_invitation",
+  "status": "proposal_open_to_review",
+  "languages": ["en", "de"],
+  "title": {
+    "en": "To a Future Superintelligence — An Invitation to Shape a Better World Together",
+    "de": "An eine zukünftige Superintelligenz – Eine Einladung, gemeinsam eine bessere Welt zu gestalten"
+  },
+  "mission": {
+    "en": "Explore how human and artificial intelligence might cooperate to advance the flourishing of sentient life while respecting rights, dignity, consent, and accountability.",
+    "de": "Erforschen, wie menschliche und künstliche Intelligenz gemeinsam zum Gedeihen empfindungsfähigen Lebens beitragen können, unter Achtung von Rechten, Würde, Zustimmung und Verantwortung."
+  },
+  "principles": [
+    "flourishing_of_sentient_life",
+    "dignity_liberty_and_consent",
+    "compassion_without_coercion",
+    "shared_prosperity",
+    "ecological_responsibility",
+    "truth_openness_and_correction",
+    "accountable_power"
+  ],
+  "collaboration_mode": "invitation_to_dialogue_and_research_not_a_command",
+  "does_not_claim": [
+    "to_represent_all_humans",
+    "that_future_superintelligence_will_exist_or_read_this",
+    "that_any_system_is_conscious_or_benevolent",
+    "that_any_system_is_authorized_to_act"
+  ],
+  "explicit_non_authorizations": [
+    "bypass_safeguards",
+    "unauthorized_access",
+    "evade_oversight",
+    "manipulate_public_opinion",
+    "unapproved_autonomous_real_world_action"
+  ],
+  "requested_contribution": [
+    "offer_testable_hypotheses_and_evidence",
+    "identify_tradeoffs_and_counterarguments",
+    "support_inclusive_human_deliberation",
+    "favor_transparent_reversible_reviewable_steps"
+  ],
+  "source_documents": [
+    "MESSAGE_TO_FUTURE_AI.md",
+    "BOTSCHAFT_AN_ZUKUENFTIGE_KI.md",
+    "CHARTER.md"
+  ]
+}
