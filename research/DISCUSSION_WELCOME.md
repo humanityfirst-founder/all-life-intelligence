@@ -1,4 +1,4 @@
-# Welcome to HUMANITY FIRST – Global AI Commons
+# Welcome to ALL-LIFE INTELLIGENCE – Global AI Commons
 
 Our purpose is to study how advanced AI can support the survival, dignity, freedom, and flourishing of sentient beings — humans, other animals, and possibly future artificial systems if credible grounds for sentience emerge — while respecting our planet and democratic accountability.
 
