@@ -1,4 +1,4 @@
-# HUMANITY FIRST – KI-Agententeam, Version 1.0
+# ALL-LIFE INTELLIGENCE – KI-Agententeam, Version 1.0
 
 Stand: 24. Oktober 2026  
 Status: **Konzept und einsatzfertige Rollenbriefings**, keine gestarteten autonomen Agenten.
