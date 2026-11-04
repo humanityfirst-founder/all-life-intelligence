@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "name": "v1.7_frozen_internal_reference",
+  "reference_sha256": "6ca6be16d7d97fdd96146cb9e6a4f666a759b55a615b6800f178cddd29fbeec6",
+  "reference_case_count": 24,
+  "min_software_tests": 130,
+  "note": "Frozen synthetic test predictions, NOT independent expert truth; manual columns excluded from digest."
+}

@@ -1,0 +1,27 @@
+{
+  "version": "1.7",
+  "created_utc": "2026-10-30T17:25:40.899956+00:00",
+  "mode": "offline_local_development",
+  "technical_gate_passed": true,
+  "scientific_validation": false,
+  "model_updated": false,
+  "api_calls_executed": 0,
+  "code_changed_automatically": false,
+  "manual_release_required": true,
+  "tests": {
+    "passed": true,
+    "tests_run": 130,
+    "returncode": 0,
+    "diagnostic_excerpt": "olle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A3] Rolle analysiert ...\n[A4] Rolle analysiert ...\n[A5] Rolle analysiert ...\n[A7] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nQualitaetsbilanz: /tmp/tmpqhq0z075/QUALITAETSBILANZ.html\nManuelle Pruefliste: /tmp/tmpqhq0z075/PRUEFLISTE.csv\nKeine Quellenabrufe und keine API-Kosten.\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nMethodische Qualitätskontrolle mit Version 1.2 erneut ausgeführt.\nQuellen werden einzeln geladen und mit den zitierten Aussagen verglichen...\nS01 HTML_ABGERUFEN_TEXTAUSZUG\nOriginalquellen-Prüfbericht erstellt: /tmp/tmpro3l4pbm/letzter_bericht.html\nQualitaetsbilanz erstellt: /tmp/tmpro3l4pbm/QUALITAETSBILANZ.html\nManuelle Pruefliste erstellt: /tmp/tmpro3l4pbm/PRUEFLISTE.csv\nTextstellen sind KEINE wissenschaftlich bestätigten Belege.\n[Batch 1/4] Kontextpruefung ...\n[Batch 2/4] Kontextpruefung ...\n[Batch 3/4] Kontextpruefung ...\n[Batch 4/4] Kontextpruefung ...\n[Batch 1/4] Kontextpruefung ...\n"
+  },
+  "synthetic_context_cases": {
+    "cases_total": 24,
+    "cases_evaluated": 19,
+    "matches_with_internal_labels": 16,
+    "differences_from_internal_labels": 3,
+    "cases_pending": 5,
+    "human_confirmations_reported": 0,
+    "source_content_verified": 0
+  },
+  "case_loading_error": null
+}

@@ -1,0 +1,6 @@
+ALL-LIFE INTELLIGENCE 1.6
+1. START_TESTS.bat doppelklicken (kostenlos)
+2. START_KONTEXTPRUEFUNG_OFFLINE.bat doppelklicken (kostenlos)
+3. reports/KONTEXTPRUEFUNG_1_6.html ansehen oder hochladen
+OPTIONAL: START_KONTEXTPRUEFUNG_ECHT_OPTIONAL.bat (maximal 4 kostenpflichtige OpenAI-Aufrufe, nur nach ausdruecklicher Bestaetigung)
+Keine API-Daten / Freigaben werden automatisch veroeffentlicht.

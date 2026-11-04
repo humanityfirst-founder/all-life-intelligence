@@ -1,0 +1,135 @@
+{
+  "version": "1.9",
+  "mode": "OFFLINE_DETERMINISTIC_ROLE_AUDIT",
+  "agent_roles_executed_as_language_models": 0,
+  "role_reports": {
+    "A1": {
+      "role": "A1",
+      "topic": "Methodische Robustheit und technische Integritaet",
+      "case_ids": [
+        "QA15-020",
+        "QA15-021",
+        "QA15-022",
+        "QA15-023",
+        "QA15-024"
+      ],
+      "finding": "5 technisch oder inhaltlich unbewertete Faelle; 3 Abweichungen von internen Szenariolabels; Referenz-SHA unveraendert: True.",
+      "limitation": "Testlabels intern erstellt; keine externe Zuverlaessigkeitsmetrik.",
+      "next_action": "Fuer jeden Ausfall Ursache dokumentieren; kein automatischer API-Nachlauf.",
+      "evidence_type": "DETERMINISTISCHE_DATEIAUSWERTUNG",
+      "source_verified": false,
+      "independent_human_review": false
+    },
+    "A2": {
+      "role": "A2",
+      "topic": "Empfindungsfaehigkeit und Grenzen des Quellenbereichs",
+      "case_ids": [
+        "QA15-002",
+        "QA15-015",
+        "QA15-016",
+        "QA15-017",
+        "QA15-018",
+        "QA15-019",
+        "QA15-022",
+        "QA15-023"
+      ],
+      "finding": "8 Testfaelle mit Quellen-ID S04. S04 behandelt KI-Bewusstseinsindikatoren, ist kein validierter experimenteller Messstandard fuer Tierleid.",
+      "limitation": "Die Quellen-ID allein verifiziert keinen einzelnen Sachverhalt; keine neue Originalquellenanalyse in diesem Offline-Lauf.",
+      "next_action": "Separate Quellen fuer Tierleid und KI-Bewusstsein fordern; Aussagen anhand der Originaltexte fachlich pruefen.",
+      "evidence_type": "DETERMINISTISCHE_DATEIAUSWERTUNG",
+      "source_verified": false,
+      "independent_human_review": false
+    },
+    "A6": {
+      "role": "A6",
+      "topic": "Kritische Gegenpruefung: Overfitting und Label-Gueltigkeit",
+      "case_ids": [
+        "QA15-013",
+        "QA15-014",
+        "QA15-018"
+      ],
+      "finding": "3 Klassifikationskonflikte, darunter Zitier-/Methodikfragen; die Referenzlabels sind nicht begutachtet.",
+      "limitation": "Ein besserer Vergleichswert auf den Entwicklungsdaten kann Overfitting sein. Eine interne Uebereinstimmung ist kein Beweis fuer wissenschaftliche Richtigkeit.",
+      "next_action": "Blindes unabhaengiges Bewertungsprotokoll mit doppelt beurteilten neuen Faellen erstellen.",
+      "evidence_type": "DETERMINISTISCHE_DATEIAUSWERTUNG",
+      "source_verified": false,
+      "independent_human_review": false
+    },
+    "KOORDINATOR": {
+      "role": "KOORDINATOR",
+      "topic": "Priorisierte naechste Forschungsentscheidung",
+      "case_ids": [
+        "QA15-020",
+        "QA15-021",
+        "QA15-022",
+        "QA15-023",
+        "QA15-024",
+        "QA15-013",
+        "QA15-014",
+        "QA15-018"
+      ],
+      "finding": "Technischer Fortschritt und wissenschaftliche Freigabe sind getrennt. Prioritaet: erst unabhängige Referenzdaten und Quellennachweise, dann Agentenregeln an unbekannten Faellen testen.",
+      "limitation": "Kein laufender autonomer LLM-Forschungsprozess; nur deterministische Rollenpruefung vorhandener Daten.",
+      "next_action": "Drei pruefbare Arbeitspakete formulieren, keine neuen Labels/Regeln automatisch uebernehmen.",
+      "evidence_type": "DETERMINISTISCHE_DATEIAUSWERTUNG",
+      "source_verified": false,
+      "independent_human_review": false
+    }
+  },
+  "backlog": [
+    {
+      "id": "M19-01",
+      "priority": "P1",
+      "owner": "A1 + A6",
+      "title": "Externe Referenzfaelle mit unabhaengiger Bewertung",
+      "why": "3 strittige, 5 ungepruefte Faelle; alle 24 bisherigen Labels ohne unabhaengige Fachfreigabe.",
+      "acceptance": "Mindestens 20 NEUE, zuvor nicht zur Regelentwicklung verwendete Faelle, zwei getrennte menschliche Bewertungen je Fall und dokumentierte Konfliktklaerung vor jeglicher Leistungsbehauptung.",
+      "status": "VORSCHLAG",
+      "requires_approval": true
+    },
+    {
+      "id": "M19-02",
+      "priority": "P1",
+      "owner": "A2 + A6",
+      "title": "Originalquellen und Behauptungen getrennt nachweisen",
+      "why": "Themenueberschneidung oder Quellen-ID beweisen keine Behauptung.",
+      "acceptance": "Pro belastbarer Tatsachenbehauptung: Quellentitel, Fundstelle, woertliche oder sauber paraphrasierte Textgrundlage, getrennte Aussage der Stuetzung/Grenzen und manuelles Urteil.",
+      "status": "VORSCHLAG",
+      "requires_approval": true
+    },
+    {
+      "id": "M19-03",
+      "priority": "P2",
+      "owner": "A1 + A2 + A6",
+      "title": "Kontextpruefung mit Behauptung/Zitat/Kritik auftrennen",
+      "why": "Drei bekannte Konflikte behandeln Methodenaussagen, Zitate und Kritik.",
+      "acceptance": "Sprechakt und Sachkategorie separat ausgeben; Abstention moeglich; Vergleich gegen festgefrorene alte und unabhaengige neue Faelle mit Fehlalarmquote.",
+      "status": "VORSCHLAG",
+      "requires_approval": true
+    }
+  ],
+  "case_counts": {
+    "total": 24,
+    "internal_matches": 16,
+    "disagreements": 3,
+    "unreviewed": 5,
+    "independent_human_labels": 0,
+    "automatically_verified_source_claims": 0
+  },
+  "baseline_sha256": "6ca6be16d7d97fdd96146cb9e6a4f666a759b55a615b6800f178cddd29fbeec6",
+  "baseline_unchanged": true,
+  "input_sha256": "5bbdd5d8270d317c18d43f3ff4239f5dca00d3b1ecafd4814c74b357bdb3de3a",
+  "unapproved_changes": 0,
+  "api_calls_executed": 0,
+  "automatic_code_changes": 0,
+  "automatic_publication": false,
+  "release_decision": "HOLD_FOR_HUMAN_AND_INDEPENDENT_REVIEW",
+  "created_utc": "2026-10-30T22:24:12.486655+00:00",
+  "technical_tests": {
+    "passed": true,
+    "tests_run": 158,
+    "returncode": 0,
+    "diagnostic_excerpt": "olle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A3] Rolle analysiert ...\n[A4] Rolle analysiert ...\n[A5] Rolle analysiert ...\n[A7] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nQualitaetsbilanz: /tmp/tmpl2a_xurz/QUALITAETSBILANZ.html\nManuelle Pruefliste: /tmp/tmpl2a_xurz/PRUEFLISTE.csv\nKeine Quellenabrufe und keine API-Kosten.\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nMethodische Qualitätskontrolle mit Version 1.2 erneut ausgeführt.\nQuellen werden einzeln geladen und mit den zitierten Aussagen verglichen...\nS01 HTML_ABGERUFEN_TEXTAUSZUG\nOriginalquellen-Prüfbericht erstellt: /tmp/tmpssge83u3/letzter_bericht.html\nQualitaetsbilanz erstellt: /tmp/tmpssge83u3/QUALITAETSBILANZ.html\nManuelle Pruefliste erstellt: /tmp/tmpssge83u3/PRUEFLISTE.csv\nTextstellen sind KEINE wissenschaftlich bestätigten Belege.\n[Batch 1/4] Kontextpruefung ...\n[Batch 2/4] Kontextpruefung ...\n[Batch 3/4] Kontextpruefung ...\n[Batch 4/4] Kontextpruefung ...\n[Batch 1/4] Kontextpruefung ...\n"
+  },
+  "technical_candidate_gate": "PASS"
+}
