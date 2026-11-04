@@ -1,0 +1,39 @@
+name: Agentensystem v1.9 offline baseline
+on:
+  pull_request:
+    branches: ['import/agentensystem-v1.9']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out CI harness
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check out frozen import
+        uses: actions/checkout@v4
+        with:
+          ref: 0b6dfc29c625133ecd7942166ceb57bcbfdc233f
+          path: baseline
+          persist-credentials: false
+      - name: Prepare Python 3.11
+        run: docker pull python:3.11-slim
+      - name: Verify 158 tests, missing-test control and council reports offline
+        run: |
+          mkdir -p results
+          docker run --rm --network none --read-only --cap-drop ALL \
+            --security-opt no-new-privileges --user "$(id -u):$(id -g)" \
+            --tmpfs /tmp:rw,nosuid,nodev,mode=1777 \
+            -v "$PWD/baseline/agentensystem:/baseline:ro" \
+            -v "$PWD/.github/ci/verify_v19.py:/verify.py:ro" \
+            -v "$PWD/results:/results" \
+            python:3.11-slim python /verify.py /baseline /results
+      - name: Upload verified reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: v1.9-reports-0b6dfc2
+          path: results/
+          if-no-files-found: error
