@@ -52,6 +52,13 @@ class ApiProblem(RuntimeError):
     pass
 
 
+OFFLINE_MESSAGE = "Netzwerkzugriff durch ALI_OFFLINE_ONLY=1 gesperrt."
+
+
+def offline_only() -> bool:
+    return os.environ.get("ALI_OFFLINE_ONLY") == "1"
+
+
 def read_catalog(path: Path = SOURCE_FILE) -> list[dict]:
     raw = json.loads(path.read_text(encoding="utf-8"))
     sources = raw.get("sources", [])
@@ -268,6 +275,8 @@ def extract_text(payload: dict) -> str:
 
 def call_openai(*, instructions: str, input_text: str, model: str,
                 api_key: str, max_tokens: int) -> str:
+    if offline_only():
+        raise ApiProblem(OFFLINE_MESSAGE)
     body = {"model": model, "instructions": instructions, "input": input_text,
             "max_output_tokens": max_tokens, "store": False}
     if model == "gpt-5-mini":
@@ -523,6 +532,9 @@ def cli(argv=None) -> int:
     a = p.parse_args(argv)
     roles = [r.strip().upper() for r in a.roles.split(",")]
     if a.mode == "live":
+        if offline_only():
+            print(OFFLINE_MESSAGE, file=sys.stderr)
+            return 2
         print(f"LIVE: {len(roles)+2} kostenpflichtige API-Aufrufe; Modell: {a.model}")
         print("Kuratiertes Offline-Quellenverzeichnis; KEINE Live-Websuche; KEINE Veröffentlichung.")
         key = os.environ.get("OPENAI_API_KEY", "").strip()

@@ -1,0 +1,37 @@
+name: Agentensystem Offline-Schutz
+on:
+  pull_request:
+    branches: ['import/agentensystem-v1.9']
+    paths:
+      - 'agentensystem/**'
+      - '.github/workflows/agentensystem-offline.yml'
+permissions:
+  contents: read
+jobs:
+  linux-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Suite, Demo und Forschungsrat unter Python 3.11
+        run: |
+          docker run --rm --network none --read-only --cap-drop ALL \
+            --security-opt no-new-privileges --user "$(id -u):$(id -g)" \
+            --tmpfs /tmp:rw,nosuid,nodev,mode=1777 -e ALI_OFFLINE_ONLY=1 \
+            -v "$PWD/agentensystem:/source:ro" python:3.11-slim sh -ec '
+              cp -R /source /tmp/project
+              cd /tmp/project
+              python agent.py --mode demo --out /tmp/demo
+              python research_board_v19.py
+              python - <<"PY"
+          import json
+          from pathlib import Path
+          report = json.loads(Path("reports/FORSCHUNGSRAT_1_9.json").read_text())
+          count = report["technical_tests"]["tests_run"]
+          if count < 162 or report["technical_candidate_gate"] != "PASS":
+              raise SystemExit(f"Unvollständige oder fehlgeschlagene Testsuite ({count})")
+          print(f"{count} Tests erfolgreich.")
+          PY
+            '
