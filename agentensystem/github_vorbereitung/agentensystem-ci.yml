@@ -1,0 +1,37 @@
+name: ALL-LIFE INTELLIGENCE offline Forschungsrat
+on:
+  push:
+    paths:
+      - 'agentensystem/**'
+      - '.github/workflows/agentensystem-ci.yml'
+  pull_request:
+    paths:
+      - 'agentensystem/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-forschungsrat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ALI_OFFLINE_ONLY: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Quellcode vorhanden?
+        run: test -f agentensystem/research_board_v19.py
+      - name: Offline-Forschungsrat und Tests
+        working-directory: agentensystem
+        run: python research_board_v19.py
+      - name: Berichte bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: ali-forschungsrat-v19
+          path: |
+            agentensystem/reports/FORSCHUNGSRAT_1_9.json
+            agentensystem/reports/FORSCHUNGSRAT_1_9.html
+            agentensystem/reports/FORSCHUNGSRAT_1_9_AUFGABEN.csv
+          if-no-files-found: error

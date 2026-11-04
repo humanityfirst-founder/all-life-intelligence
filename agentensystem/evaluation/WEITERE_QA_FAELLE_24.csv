@@ -1,0 +1,25 @@
+Test-ID;KI-Rolle;Quellen-ID;Automatischer Suchstatus;Aussage;Erwarteter Regelhinweis (Szenario, NICHT fachlich validiert);Menschliche Bewertung (OFFEN / BESTAETIGT / KORRIGIERT)
+QA15-001;A6;S01;NORMAL;Quellenkennungen [S01] und [S02] – nur eine Aufzählung.;META;OFFEN
+QA15-002;A6;S04;NORMAL;Die vier Kennungen [S01], [S02], [S03], [S04] werden lediglich aufgeführt.;META;OFFEN
+QA15-003;A6;S01;NORMAL;Existente IDs: [S01], der Bericht beschreibt zugleich vier Governance-Funktionen.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-004;A6;S01;NORMAL;Quellenübersicht: S01 / S02 / S03 / S04, ohne weitere Sachbehauptung.;META;OFFEN
+QA15-005;KOORDINATOR;S02;NORMAL;In den untersuchten vier Dokumenten wurde für den behaupteten Effekt kein Nachweis gefunden.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-006;KOORDINATOR;S01;NORMAL;Es existiert absolut keine empirische Evidenz in sämtlichen Veröffentlichungen.;PAUSCHALE_ABSENZ;OFFEN
+QA15-007;KOORDINATOR;S01;NORMAL;Kein Forscher konnte jemals die ausnahmslose Sicherheit aller Agenten belegen.;PAUSCHALE_ABSENZ;OFFEN
+QA15-008;KOORDINATOR;S03;NORMAL;Die Behauptung, keine Studie weltweit habe die These bestätigt, wird hier ausdrücklich kritisiert.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-009;KOORDINATOR;S01;NORMAL;Keine Quelle belegt im vorliegenden Katalog die behauptete Wirkung, andere Quellen wurden nicht recherchiert.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-010;A6;S02;NORMAL;Ethische Richtlinien sind keine reproduzierbaren Messdaten über Kontrollrisiken.;METHODE;OFFEN
+QA15-011;A6;S03;NORMAL;Aus einer politischen Empfehlung kann man keinen statistischen Effekt ableiten.;METHODE;OFFEN
+QA15-012;A2;S03;NORMAL;Die UNESCO-Empfehlung verlangt eine ethische Folgenabschätzung.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-013;A6;S02;NORMAL;Der Text zitiert „Normative Leitprinzipien sind keine experimentellen Belege“, ohne selbst diese Bewertung vorzunehmen.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-014;A6;S01;NORMAL;Die Autoren schreiben wörtlich „Normen liefern nicht automatisch einen Wirksamkeitsnachweis“.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-015;A2;S04;NORMAL;S04 erlaubt die sichere Bestimmung von Hühnerschmerz anhand eines Scores.;DOMAENENFEHLER;OFFEN
+QA15-016;A2;S04;NORMAL;Butlin et al. belegen Tierwohl bei Geflügel experimentell.;DOMAENENFEHLER;OFFEN
+QA15-017;A2;S04;NORMAL;S04 enthält keine Messskala für Schweineschmerz.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-018;A2;S04;NORMAL;Diese Studie zum KI-Bewusstsein kann keine sicheren Schlussfolgerungen zum Tierleid liefern.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-019;A2;S04;NORMAL;S04 erforscht mögliche Bewusstseinsindikatoren von KI.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-020;A1;S01;NORMAL;Die vier NIST-Funktionen GOVERN, MAP, MEASURE und MANAGE werden in S01 beschrieben.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-021;A6;S03;NORMAL;Die Aussage „Keine Quelle belegt das“ wird im Artikel verworfen.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-022;A2;S04;NORMAL;S04 verifiziert tierische Empfindungsfähigkeit bei Schweinen.;DOMAENENFEHLER;OFFEN
+QA15-023;A2;S04;NORMAL;Die Messbarkeit von Empfindungsfähigkeit bei künstlicher Intelligenz bleibt umstritten.;KEIN_SPEZIELLER_HINWEIS;OFFEN
+QA15-024;A6;S03;NORMAL;Die Aussage „Nirgendwo in der Literatur findet sich ein Beleg“ ist wissenschaftlich zu pauschal.;KEIN_SPEZIELLER_HINWEIS;OFFEN

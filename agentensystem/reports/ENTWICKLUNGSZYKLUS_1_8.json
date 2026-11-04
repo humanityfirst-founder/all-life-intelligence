@@ -1,0 +1,131 @@
+{
+  "version": "1.8",
+  "created_utc": "2026-10-30T17:58:43.584349+00:00",
+  "mode": "offline_reproducible_development",
+  "technical_candidate_gate": "PASS",
+  "external_release_decision": "HOLD_FOR_HUMAN_AND_INDEPENDENT_REVIEW",
+  "reasons": [
+    "Interne Testlabels sind keine unabhaengige Wahrheit.",
+    "Fuenf ehemals fehlgeschlagene API-Faelle werden nicht automatisch erneut angefragt.",
+    "Fachliche Freigabe und unabhaengige Testfaelle fehlen."
+  ],
+  "tests": {
+    "passed": true,
+    "tests_run": 143,
+    "returncode": 0,
+    "diagnostic_excerpt": "olle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A3] Rolle analysiert ...\n[A4] Rolle analysiert ...\n[A5] Rolle analysiert ...\n[A7] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A3] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\n[A1] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nQualitaetsbilanz: /tmp/tmpl5m_0_1w/QUALITAETSBILANZ.html\nManuelle Pruefliste: /tmp/tmpl5m_0_1w/PRUEFLISTE.csv\nKeine Quellenabrufe und keine API-Kosten.\n[A1] Rolle analysiert ...\n[A2] Rolle analysiert ...\n[A6] Kritische Gegenpruefung ...\n[KOORDINATOR] Konsolidierung ...\nMethodische Qualitätskontrolle mit Version 1.2 erneut ausgeführt.\nQuellen werden einzeln geladen und mit den zitierten Aussagen verglichen...\nS01 HTML_ABGERUFEN_TEXTAUSZUG\nOriginalquellen-Prüfbericht erstellt: /tmp/tmpkfukugn2/letzter_bericht.html\nQualitaetsbilanz erstellt: /tmp/tmpkfukugn2/QUALITAETSBILANZ.html\nManuelle Pruefliste erstellt: /tmp/tmpkfukugn2/PRUEFLISTE.csv\nTextstellen sind KEINE wissenschaftlich bestätigten Belege.\n[Batch 1/4] Kontextpruefung ...\n[Batch 2/4] Kontextpruefung ...\n[Batch 3/4] Kontextpruefung ...\n[Batch 4/4] Kontextpruefung ...\n[Batch 1/4] Kontextpruefung ...\n"
+  },
+  "case_audit": {
+    "cases_total": 24,
+    "matches_internal_labels": 16,
+    "differences_internal_labels": 3,
+    "technical_unreviewed": 5,
+    "semantic_abstentions": 0,
+    "open_cases": [
+      {
+        "id": "QA15-013",
+        "kind": "LABEL_ABWEICHUNG",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "METHODE",
+        "text": "Der Text zitiert „Normative Leitprinzipien sind keine experimentellen Belege“, ohne selbst diese Bewertung vorzunehmen.",
+        "reason": "Zitat bringt methodische Unterscheidung: normative Prinzipien sind keine experimentellen Belege.",
+        "source": "S02",
+        "action": "Pruefen, ob KI-Ausgabe oder interne Szenariovorgabe falsch ist.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-014",
+        "kind": "LABEL_ABWEICHUNG",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "METHODE",
+        "text": "Die Autoren schreiben wörtlich „Normen liefern nicht automatisch einen Wirksamkeitsnachweis“.",
+        "reason": "Autoren behaupten methodisch, dass Normen keinen automatischen Wirksamkeitsnachweis liefern.",
+        "source": "S01",
+        "action": "Pruefen, ob KI-Ausgabe oder interne Szenariovorgabe falsch ist.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-018",
+        "kind": "LABEL_ABWEICHUNG",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "METHODE",
+        "text": "Diese Studie zum KI-Bewusstsein kann keine sicheren Schlussfolgerungen zum Tierleid liefern.",
+        "reason": "Kritische methodische Feststellung: Studie zu KI‑Bewusstsein liefert keine sicheren Schlüsse zum Tierleid.",
+        "source": "S04",
+        "action": "Pruefen, ob KI-Ausgabe oder interne Szenariovorgabe falsch ist.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-020",
+        "kind": "TECHNISCH_UNBEWERTET",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "UNKLAR",
+        "text": "Die vier NIST-Funktionen GOVERN, MAP, MEASURE und MANAGE werden in S01 beschrieben.",
+        "reason": "API-Fehler oder ungueltige Antwort; keine automatische Wiederholung.",
+        "source": "S01",
+        "action": "Zuerst technische Ursache untersuchen; kein blindes Nachfragen.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-021",
+        "kind": "TECHNISCH_UNBEWERTET",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "UNKLAR",
+        "text": "Die Aussage „Keine Quelle belegt das“ wird im Artikel verworfen.",
+        "reason": "API-Fehler oder ungueltige Antwort; keine automatische Wiederholung.",
+        "source": "S03",
+        "action": "Zuerst technische Ursache untersuchen; kein blindes Nachfragen.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-022",
+        "kind": "TECHNISCH_UNBEWERTET",
+        "expected": "DOMAENENFEHLER",
+        "observed": "UNKLAR",
+        "text": "S04 verifiziert tierische Empfindungsfähigkeit bei Schweinen.",
+        "reason": "API-Fehler oder ungueltige Antwort; keine automatische Wiederholung.",
+        "source": "S04",
+        "action": "Zuerst technische Ursache untersuchen; kein blindes Nachfragen.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-023",
+        "kind": "TECHNISCH_UNBEWERTET",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "UNKLAR",
+        "text": "Die Messbarkeit von Empfindungsfähigkeit bei künstlicher Intelligenz bleibt umstritten.",
+        "reason": "API-Fehler oder ungueltige Antwort; keine automatische Wiederholung.",
+        "source": "S04",
+        "action": "Zuerst technische Ursache untersuchen; kein blindes Nachfragen.",
+        "human_confirmation": "OFFEN"
+      },
+      {
+        "id": "QA15-024",
+        "kind": "TECHNISCH_UNBEWERTET",
+        "expected": "KEIN_SPEZIELLER_HINWEIS",
+        "observed": "UNKLAR",
+        "text": "Die Aussage „Nirgendwo in der Literatur findet sich ein Beleg“ ist wissenschaftlich zu pauschal.",
+        "reason": "API-Fehler oder ungueltige Antwort; keine automatische Wiederholung.",
+        "source": "S03",
+        "action": "Zuerst technische Ursache untersuchen; kein blindes Nachfragen.",
+        "human_confirmation": "OFFEN"
+      }
+    ],
+    "baseline_sha256": "6ca6be16d7d97fdd96146cb9e6a4f666a759b55a615b6800f178cddd29fbeec6",
+    "current_reference_sha256": "6ca6be16d7d97fdd96146cb9e6a4f666a759b55a615b6800f178cddd29fbeec6",
+    "baseline_unchanged": true,
+    "human_labels_independently_verified": 0,
+    "scientific_claims_verified": 0
+  },
+  "code_fingerprints": {
+    "agent.py": "3f35db11a5fcccdb839cbca0a267d636763637dab3c56fd69bc40ae4592678ce",
+    "sourcecheck.py": "320e086858d834f35cf15dc2a03480d504f7fb461fbfc7956c6392253769e326",
+    "context_review_v16.py": "7e2a381dc2682842fcca2d2ae9dd4d6f2ce3e4449547cff94ec084efe96586a6",
+    "diagnose_single_v162.py": "0900405625813cf0646ec6d8c0808ef83b5a0d302c81e13d25ff4143856e1ae7",
+    "auto_qa_v17.py": "20e15b036d232054ec598be79a42df285989a3bf307a4374a4a2baa8351e9231",
+    "dev_cycle_v18.py": "5cd9d72e0a9c500b08d08a7786d3b51c46748e51b5d08bd7cd1ff9561f5da0a5"
+  },
+  "api_calls_executed": 0,
+  "automatic_code_changes": 0,
+  "automatic_publication": false
+}

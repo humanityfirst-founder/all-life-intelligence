@@ -1,0 +1,15 @@
+ALL-LIFE INTELLIGENCE – Agentensystem v1.8
+
+NEU: Die Entwicklungstests wurden bereits in der Entwicklungsumgebung ausgefuehrt.
+Der Benutzer muss keine ZIP herunterladen, BAT-Dateien starten oder Berichte hochladen.
+
+Hauptdokument: README_1_8.md
+Neuester Bericht: reports/ENTWICKLUNGSZYKLUS_1_8.html
+Maschinenlesbar: reports/ENTWICKLUNGSZYKLUS_1_8.json
+Offene Faelle: reports/OFFENE_FRAGEN_1_8.csv
+
+Optional fuer technisch Interessierte:
+  START_ENTWICKLUNGSZYKLUS_1_8.bat (lokale, kostenlose Tests)
+
+Es gibt keine automatischen API-Aufrufe oder GitHub-Veröffentlichungen.
+Produktive Freigaben bleiben menschlichen Entscheidungen vorbehalten.

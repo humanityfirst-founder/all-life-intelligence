@@ -1,0 +1,70 @@
+{
+  "project": "ALL-LIFE INTELLIGENCE",
+  "catalog_version": "1.1",
+  "compiled_date": "2026-10-27",
+  "notes": "Vier kuratierte öffentliche Quellen. Originaltexte nur nach ausdrücklicher Zustimmung abrufen. Katalogeinträge und Stichwortsuche sind kein Nachweis technischer Sicherheit, wissenschaftlicher Wirksamkeit oder Bewusstsein.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "NIST AI Risk Management Framework 1.0 – Core (Kapitel 5)",
+      "organization": "U.S. National Institute of Standards and Technology (NIST)",
+      "year": "2023",
+      "kind": "Risikomanagement-Leitlinie (kein Wirksamkeitsnachweis)",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "summary": "Offizieller NIST-Volltextabschnitt zum AI RMF Core: die vier Funktionen GOVERN, MAP, MEASURE und MANAGE organisieren Risikomanagementaktivitäten. Dies ist kein Beweis, dass künftige Superintelligenz kontrollierbar bleibt.",
+      "roles": [
+        "A1",
+        "A3",
+        "A4",
+        "A6"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "OECD AI Principles",
+      "organization": "Organisation for Economic Co-operation and Development (OECD)",
+      "year": "2019; aktualisiert 2024",
+      "kind": "Normative internationale Prinzipien (kein empirischer Nachweis)",
+      "url": "https://oecd.ai/en/ai-principles",
+      "summary": "Prinzipien für vertrauenswürdige KI, darunter Menschenrechte und demokratische Werte, Transparenz, Robustheit und Sicherheit sowie Rechenschaftspflicht. Sie sind politische Leitlinien, keine experimentelle Bestätigung technischer Alignment-Lösungen.",
+      "roles": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "Recommendation on the Ethics of Artificial Intelligence",
+      "organization": "UNESCO",
+      "year": "2021",
+      "kind": "Normative UNESCO-Empfehlung (kein empirischer Nachweis)",
+      "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence",
+      "summary": "Empfiehlt die Achtung der Menschenrechte sowie den Schutz von Umwelt und Ökosystemen über den Lebenszyklus von KI-Systemen. Thematisiert auch ethische Folgenabschätzung, Verhältnismässigkeit und angemessene Aufsicht. Daraus folgt nicht, dass die tatsächliche Wirkung jedes KI-Einsatzes belegt ist.",
+      "roles": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A7",
+        "A6"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+      "organization": "Patrick Butlin et al.",
+      "year": "2023",
+      "kind": "Wissenschaftliche Forschungsarbeit / Preprint mit theoretischer Indikatorenanalyse",
+      "url": "https://arxiv.org/abs/2308.08708",
+      "summary": "Diskutiert neurowissenschaftliche Theorien und daraus abgeleitete Indikatoren für mögliches KI-Bewusstsein. Keine allgemeine, wissenschaftlich anerkannte Messmethode; Schlussfolgerungen über heutige oder zukünftige Systeme bleiben theorieabhängig und unsicher.",
+      "roles": [
+        "A2",
+        "A6",
+        "A7"
+      ]
+    }
+  ]
+}
