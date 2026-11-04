@@ -19,7 +19,7 @@ from context_review_v16 import (
     evaluate, render,
 )
 from rule_comparison_v15 import EXPECT
-from agent import call_openai, ApiProblem
+from agent import call_openai, ApiProblem, offline_only, OFFLINE_MESSAGE
 from improvement_agent import prevent_excel_formula
 
 PREVIOUS = OUTPUT / 'KONTEXTPRUEFUNG_1_6_1_FAELLE.csv'
@@ -140,6 +140,9 @@ def main(argv=None):
     ap.add_argument('--live',action='store_true')
     ap.add_argument('--open',action='store_true')
     opts=ap.parse_args(argv)
+    if opts.live and offline_only():
+        print(OFFLINE_MESSAGE)
+        return 2
     try:
         rows, prior = load_records()
     except (OSError,ValueError,UnicodeError,csv.Error) as exc:

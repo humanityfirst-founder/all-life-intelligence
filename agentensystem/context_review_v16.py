@@ -21,7 +21,7 @@ import re
 import sys
 import webbrowser
 
-from agent import call_openai, ApiProblem
+from agent import call_openai, ApiProblem, offline_only, OFFLINE_MESSAGE
 from candidate_rules_v15 import candidate_issue
 from improvement_agent import prevent_excel_formula
 from rule_comparison_v15 import load_24, PATH24, EXPECT
@@ -187,6 +187,9 @@ def cli(argv=None):
     p.add_argument('--out',type=Path,default=OUTPUT)
     p.add_argument('--open',action='store_true')
     a=p.parse_args(argv)
+    if a.mode == 'live' and offline_only():
+        print(OFFLINE_MESSAGE)
+        return 2
     rows=rows24()
     if a.mode=='live':
         print('OPTIONALER LIVE-MODUS: 24 synthetische Texte, maximal 4 kostenpflichtige Modell-Aufrufe.')

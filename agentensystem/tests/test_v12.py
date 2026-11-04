@@ -96,7 +96,8 @@ class ReviewExportTests(unittest.TestCase):
                   'claims':[{'role':'A1','source_id':'S01','status':'THEMATISCH_PASSENDE_STELLE_KEIN_BELEG',
                              'statement':'GOVERN MAP MEASURE MANAGE','passage':'GOVERN MAP MEASURE MANAGE','warning':'Offen'}],
                   '_source_blocks':{'S01':{'status':'HTML_ABGERUFEN_TEXTAUSZUG','blocks':['GOVERN MAP MEASURE MANAGE']}}}
-            with patch.object(sourcecheck,'check_report',return_value=fake):
+            with patch.dict('os.environ', {'ALI_OFFLINE_ONLY': '0'}), \
+                    patch.object(sourcecheck,'check_report',return_value=fake):
                 self.assertEqual(sourcecheck.run(dest/'letzter_bericht.json',confirm=False,open_report=False),0)
             self.assertTrue((dest/'PRUEFLISTE.csv').exists())
             self.assertTrue((dest/'QUALITAETSBILANZ.html').exists())

@@ -121,6 +121,9 @@ def fetch_original(source: dict, *, timeout: int = 12, opener=None) -> dict:
         result['status'] = 'BLOCKIERT_UNSICHERE_URL'
         result['message'] = 'Nur HTTPS ohne Benutzerdaten/abweichenden Port.'
         return result
+    if agent.offline_only():
+        result.update(status='BLOCKIERT_OFFLINE', message=agent.OFFLINE_MESSAGE)
+        return result
     if opener is None:
         opener = urllib.request.build_opener(RestrictedRedirect(parsed.hostname))
     req = urllib.request.Request(url, headers={
@@ -247,6 +250,9 @@ def check_report(report: dict, sources: list[dict], fetcher=fetch_original) -> d
 
 
 def run(report_path: Path, confirm: bool = True, open_report: bool = False) -> int:
+    if agent.offline_only():
+        print(agent.OFFLINE_MESSAGE, file=sys.stderr)
+        return 2
     if not report_path.is_file():
         print('Kein Forschungsbericht gefunden. Kopiere letzter_bericht.json aus v1.1 in den Ordner reports. Keine Demo starten, wenn echte Daten geprueft werden sollen.')
         return 2

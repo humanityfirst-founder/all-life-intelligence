@@ -13,7 +13,7 @@ from pathlib import Path
 import webbrowser
 from context_review_v16 import (ROOT,OUTPUT,COLS,rows24,INSTRUCTIONS,MODEL,parse_response,
                                 payload,evaluate,render)
-from agent import call_openai,ApiProblem
+from agent import call_openai,ApiProblem, offline_only, OFFLINE_MESSAGE
 from improvement_agent import prevent_excel_formula
 
 SOURCE = OUTPUT/'KONTEXTPRUEFUNG_1_6_FAELLE.csv'
@@ -100,6 +100,9 @@ def cli(argv=None):
     p.add_argument('--out',type=Path,default=OUTPUT)
     p.add_argument('--open',action='store_true')
     a=p.parse_args(argv)
+    if a.live and offline_only():
+        print(OFFLINE_MESSAGE)
+        return 2
     try:
         rows,prior=load_existing(a.source)
         _,missing=prepare(rows,prior)

@@ -1,4 +1,5 @@
 import io
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -39,16 +40,19 @@ class SourceCheckTests(unittest.TestCase):
         self.assertIn('human rights',out)
         self.assertNotIn('FAKE BAD INSTRUCTION',out)
         self.assertNotIn('private navigation',out)
+    @patch.dict(os.environ, {"ALI_OFFLINE_ONLY": "0"})
     def test_fetch_unverified_source(self):
         source={'id':'S02','url':sourcecheck.ALLOWED_PAGES['S02']}
         out=sourcecheck.fetch_original(source,opener=MockOpener(MockResponse()))
         self.assertEqual(out['status'],'HTML_ABGERUFEN_TEXTAUSZUG')
         self.assertGreater(out['text_length'],180)
         self.assertIsNotNone(out['sha256'])
+    @patch.dict(os.environ, {"ALI_OFFLINE_ONLY": "0"})
     def test_rejects_wrong_content_type(self):
         source={'id':'S02','url':sourcecheck.ALLOWED_PAGES['S02']}
         out=sourcecheck.fetch_original(source,opener=MockOpener(MockResponse(content_type='application/pdf')))
         self.assertEqual(out['status'],'NICHT_HTML')
+    @patch.dict(os.environ, {"ALI_OFFLINE_ONLY": "0"})
     def test_rejects_redirect_host(self):
         source={'id':'S02','url':sourcecheck.ALLOWED_PAGES['S02']}
         out=sourcecheck.fetch_original(source,opener=MockOpener(MockResponse(url='https://unsafe.example/'))) 
